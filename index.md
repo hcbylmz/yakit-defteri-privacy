@@ -4,18 +4,21 @@ title: Yakıt Defteri — Gizlilik Politikası
 
 # Yakıt Defteri — Gizlilik Politikası
 
-Son güncelleme: 28 Eylül 2026
+Son güncelleme: 12 Ekim 2026
 
 Yakıt Defteri, araç yakıt ve gider kayıtlarını tutan bir Android uygulamasıdır. Hesap açmanız
-gerekmez. Reklam ve analiz aracı içermez.
+gerekmez. Reklam içermez. Kendi analiz aracımız yoktur; fiş okuma için kullanılan Google ML Kit'in
+gönderebildiği tanılama verisi aşağıda "İnternet bağlantısı" bölümünde anlatılır.
 
 ## Hangi veriler, nerede
 
 - **Kayıtlarınız** (araç, yakıt alımı, gider, hatırlatma, ayarlar) yalnızca telefonunuzda,
   uygulamanın kendi veritabanında saklanır. Bize veya başka bir sunucuya gönderilmez.
-- **Otomatik yedek:** Uygulama, kayıtlarınızın bir kopyasını telefonunuzdaki
-  `İndirilenler/YakitDefteri` klasörüne JSON dosyası olarak yazar ve son 5 kopyayı tutar.
-  Bu klasör telefonunuzda kalır; dosya yöneticisi gibi depolama izni olan uygulamalar görebilir.
+- **Otomatik yedek:** Uygulama, kayıtlarınızın bir kopyasını JSON dosyası olarak yazar ve son 5
+  kopyayı tutar. Android 10 ve üstünde varsayılan yer `İndirilenler/YakitDefteri` klasörüdür;
+  Ayarlar'dan başka bir klasör seçebilir veya otomatik yedeği kapatabilirsiniz. Android 9 ve altında
+  dosyalar uygulamanın kendi klasörüne (`Android/data/com.yakitdefteri.app/files/backups`) yazılır.
+  Dosyalar telefonunuzda kalır; dosya yöneticisi gibi depolama izni olan uygulamalar görebilir.
 - **Elle yedek ve dışa aktarma:** "Yedek al", "CSV dışa aktar" ve "PDF rapor" dosyaları sizin
   seçtiğiniz yere kaydedilir.
 - **Android yedeği:** Telefonunuzda Google yedeklemesi açıksa Android, uygulamanın veritabanını ve
@@ -45,7 +48,9 @@ telefonda oluşturulur; dışarıya veri gönderilmez.
 ## Veri silme
 
 Bir aracı sildiğinizde ona ait tüm kayıtlar silinir. Uygulamayı kaldırdığınızda uygulama verileri
-silinir; `İndirilenler/YakitDefteri` klasöründeki yedek dosyaları siz silene kadar kalır.
+silinir. Android 10 ve üstünde `İndirilenler/YakitDefteri` (veya seçtiğiniz klasördeki) yedek dosyaları
+siz silene kadar kalır; Android 9 ve altında uygulamanın kendi klasöründeki yedekler uygulamayla
+birlikte silinir. Otomatik yedeği kapatmak eski dosyaları silmez.
 
 ## Çocuklar
 
@@ -59,18 +64,21 @@ Sorularınız için: yilmazhicabi@gmail.com
 
 # Yakıt Defteri — Privacy Policy
 
-Last updated: 28 September 2026
+Last updated: 12 October 2026
 
 Yakıt Defteri is an Android app for logging a car's fuel and running costs. It needs no account and
-contains no ads or analytics tools.
+contains no ads. It has no analytics of its own; the diagnostic data that Google ML Kit (used for
+reading receipts) may send is described under "Internet access".
 
 ## What data, where
 
 - **Your records** (vehicles, fill-ups, expenses, reminders, settings) are stored only on your phone,
   in the app's own database. They are not sent to us or to any other server.
-- **Automatic backup:** the app writes a copy of your records as a JSON file to the
-  `Downloads/YakitDefteri` folder on your phone and keeps the last 5 copies. The folder stays on your
-  phone; apps with storage access, such as file managers, can see it.
+- **Automatic backup:** the app writes a copy of your records as a JSON file and keeps the last 5
+  copies. On Android 10 and later the default place is the `Downloads/YakitDefteri` folder; in
+  Settings you can choose another folder or turn the automatic backup off. On Android 9 and earlier the
+  files go to the app's own folder (`Android/data/com.yakitdefteri.app/files/backups`). The files stay
+  on your phone; apps with storage access, such as file managers, can see them.
 - **Manual backup and export:** "Yedek al", "CSV dışa aktar" and "PDF rapor" files are saved where
   you choose.
 - **Android backup:** if Google backup is on, Android backs up the app's database and settings to
@@ -99,8 +107,10 @@ No data leaves the phone for them.
 
 ## Deleting data
 
-Deleting a vehicle deletes all of its records. Uninstalling the app deletes its data; backup files in
-`Downloads/YakitDefteri` remain until you delete them.
+Deleting a vehicle deletes all of its records. Uninstalling the app deletes its data. On Android 10 and
+later, backup files in `Downloads/YakitDefteri` (or the folder you chose) remain until you delete them;
+on Android 9 and earlier, backups in the app's own folder are deleted with the app. Turning the automatic
+backup off does not delete old files.
 
 ## Children
 

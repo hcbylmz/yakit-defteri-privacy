@@ -4,7 +4,7 @@ title: Yakıt Defteri — Gizlilik Politikası
 
 # Yakıt Defteri — Gizlilik Politikası
 
-Son güncelleme: 12 Ekim 2026
+Son güncelleme: 28 Ekim 2026
 
 Yakıt Defteri, araç yakıt ve gider kayıtlarını tutan bir Android uygulamasıdır. Hesap açmanız
 gerekmez. Reklam içermez. Kendi analiz aracımız yoktur; fiş okuma için kullanılan Google ML Kit'in
@@ -32,13 +32,19 @@ klasöründe durur ve Android tarafından temizlenebilir.
 
 ## İnternet bağlantısı
 
-Uygulama internete iki durumda çıkar:
+Uygulama internete şu durumlarda çıkar:
 
 1. **Marka logoları:** Araç markanızın logosu `cdn.simpleicons.org` adresinden indirilir. Bu istekte
    marka adı ve cihazınızın IP adresi o hizmete iletilir.
 2. **Google ML Kit:** Fiş okuma kütüphanesi, çalışmasını izlemek için Google'a anonim tanılama ve
    kullanım verisi (ör. cihaz modeli, performans ölçümleri) gönderebilir. Fiş içeriğini göndermez.
    Ayrıntı: https://developers.google.com/ml-kit/terms
+3. **"Verilerine sor" modeli (deneysel, isteğe bağlı):** Bu özelliği açıp modeli indirirseniz model
+   dosyası (yaklaşık 300 MB) Google Play üzerinden indirilir; bu indirme Google Play'in kendi
+   koşullarına tabidir. Sorularınız ve cevaplar **telefonun üzerinde** işlenir, hiçbir yere
+   gönderilmez. Model Google'ın Gemma modeline dayanır ve Gemma Kullanım Şartları'na tabidir.
+4. **Değerlendirme penceresi:** Uygulamada 5. yakıt kaydını girdikten sonra Google Play'in puan verme
+   penceresi bir kez açılabilir. Puan ve yorum doğrudan Google Play'e gider; uygulama bunları görmez.
 
 ## Bildirimler
 
@@ -64,7 +70,7 @@ Sorularınız için: yilmazhicabi@gmail.com
 
 # Yakıt Defteri — Privacy Policy
 
-Last updated: 12 October 2026
+Last updated: 28 October 2026
 
 Yakıt Defteri is an Android app for logging a car's fuel and running costs. It needs no account and
 contains no ads. It has no analytics of its own; the diagnostic data that Google ML Kit (used for
@@ -92,13 +98,19 @@ folder, which Android may clear.
 
 ## Internet access
 
-The app goes online in two cases:
+The app goes online in these cases:
 
 1. **Brand logos:** your car brand's logo is downloaded from `cdn.simpleicons.org`. That request
    passes the brand name and your device's IP address to that service.
 2. **Google ML Kit:** the receipt-reading library may send anonymous diagnostic and usage data to
    Google (for example device model and performance metrics). It does not send receipt contents.
    Details: https://developers.google.com/ml-kit/terms
+3. **"Ask your data" model (experimental, optional):** if you turn this feature on and download the
+   model, the model file (about 300 MB) comes from Google Play; that download is covered by Google
+   Play's own terms. Your questions and the answers are processed **on the phone** and are not sent
+   anywhere. The model is based on Google's Gemma and is subject to the Gemma Terms of Use.
+4. **Rating prompt:** after you enter your 5th fill-up, Google Play's rating sheet may open once. A
+   rating or review goes straight to Google Play; the app does not see it.
 
 ## Notifications
 
